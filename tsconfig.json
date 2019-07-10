@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "flowstate-ng": [
+        "dist/flowstate-ng"
+      ],
+      "flowstate-ng/*": [
+        "dist/flowstate-ng/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
