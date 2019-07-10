@@ -3,12 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { LandingComponent } from './components/landing/landing.component';
+import {FlowstateNgModule} from '../../../flowstate-ng/src/lib/flowstate-ng.module';
+// import {FlowstateNgModule} from 'flowstate-ng';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LandingComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FlowstateNgModule
   ],
   providers: [],
   bootstrap: [AppComponent]
