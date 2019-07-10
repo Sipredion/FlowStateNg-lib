@@ -1,12 +1,18 @@
-import { NgModule } from '@angular/core';
-import { FlowstateNgComponent } from './components/flowstate-ng.component';
-
+import {NgModule} from '@angular/core';
+import {FlowstateNgComponent} from './components/flowstate-ng.component';
+import {CardComponent} from './components/card/card.component';
 
 
 @NgModule({
-  declarations: [FlowstateNgComponent],
-  imports: [
+  declarations: [
+    FlowstateNgComponent,
+    CardComponent
   ],
-  exports: [FlowstateNgComponent]
+  imports: [],
+  exports: [
+    FlowstateNgComponent,
+    CardComponent
+  ]
 })
-export class FlowstateNgModule { }
+export class FlowstateNgModule {
+}
