@@ -1,18 +1,23 @@
-import {NgModule} from '@angular/core';
+import {ModuleWithProviders, NgModule} from '@angular/core';
 import {FlowstateNgComponent} from './components/flowstate-ng.component';
-import {CardComponent} from './components/card/card.component';
+import {FlowstateNgService} from './services/flowstate-ng.service';
+import {FlowTheme} from './models/theme.model';
 
 
 @NgModule({
   declarations: [
     FlowstateNgComponent,
-    CardComponent
   ],
   imports: [],
   exports: [
     FlowstateNgComponent,
-    CardComponent
   ]
 })
 export class FlowstateNgModule {
+  static forRoot(theme: FlowTheme): ModuleWithProviders {
+    return {
+      ngModule: FlowstateNgModule,
+      providers: [FlowstateNgService, {provide: 'theme', useValue: theme}]
+    };
+  }
 }
