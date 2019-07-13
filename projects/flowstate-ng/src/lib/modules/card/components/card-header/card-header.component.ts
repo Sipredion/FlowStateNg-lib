@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {CardComponentOrigin} from '../../types/card-main.type';
 
 @Component({
   selector: 'flw-card-header',
@@ -7,8 +6,6 @@ import {CardComponentOrigin} from '../../types/card-main.type';
   styleUrls: ['./card-header.component.scss'],
 })
 export class CardHeaderComponent implements OnInit {
-
-  origin = CardComponentOrigin.header;
 
   constructor() {
   }

@@ -27,20 +27,20 @@ export class CardDirective implements OnInit {
     this.cardColor = this.flowCardService.cardColor;
     this.theme = this.libService.applicationTheme;
 
-    if (!this.cardColor.cardColor) {
-      this.cardColor.cardColor = 'dark';
+    if (!this.cardColor) {
+      this.cardColor = 'dark';
     }
 
     if (this.isFrom === 'main') {
-      this.setMainCardStyle(this.cardShadow, this.theme[this.cardColor.cardColor]);
+      this.setMainCardStyle(this.cardShadow, this.theme[this.cardColor]);
     }
 
     if (this.isFrom === 'header') {
-      this.setCardHeaderStyles(this.theme[this.cardColor.cardColor]);
+      this.setCardHeaderStyles(this.theme[this.cardColor]);
     }
 
     if (this.isFrom === 'footer') {
-      this.setCardFooterStyles(this.theme[this.cardColor.cardColor]);
+      this.setCardFooterStyles(this.theme[this.cardColor]);
     }
   }
 
@@ -50,7 +50,7 @@ export class CardDirective implements OnInit {
       'boxShadow',
       FlowCardUtil.setCardShadow(cardShadow, colorType)
     );
-    if (colorType !== '0, 0, 0' || cardShadow.cardShadow === 'light') {
+    if (colorType !== '0, 0, 0' || cardShadow === 'light') {
       this.renderer.setStyle(
         this.el.nativeElement,
         'border',
