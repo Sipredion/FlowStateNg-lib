@@ -44,7 +44,7 @@
         }
       }
     },
-    "lib-demo": {
+    "flowstate-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -70,25 +70,25 @@
           "skipTests": true
         }
       },
-      "root": "projects/lib-demo",
-      "sourceRoot": "projects/lib-demo/src",
+      "root": "projects/flowstate-app",
+      "sourceRoot": "projects/flowstate-app/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/lib-demo",
-            "index": "projects/lib-demo/src/index.html",
-            "main": "projects/lib-demo/src/main.ts",
-            "polyfills": "projects/lib-demo/src/polyfills.ts",
-            "tsConfig": "projects/lib-demo/tsconfig.app.json",
+            "outputPath": "dist/flowstate-app",
+            "index": "projects/flowstate-app/src/index.html",
+            "main": "projects/flowstate-app/src/main.ts",
+            "polyfills": "projects/flowstate-app/src/polyfills.ts",
+            "tsConfig": "projects/flowstate-app/tsconfig.app.json",
             "aot": false,
             "assets": [
-              "projects/lib-demo/src/favicon.ico",
-              "projects/lib-demo/src/assets"
+              "projects/flowstate-app/src/favicon.ico",
+              "projects/flowstate-app/src/assets"
             ],
             "styles": [
-              "projects/lib-demo/src/styles.scss"
+              "projects/flowstate-app/src/styles.scss"
             ],
             "scripts": []
           },
@@ -96,8 +96,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/lib-demo/src/environments/environment.ts",
-                  "with": "projects/lib-demo/src/environments/environment.prod.ts"
+                  "replace": "projects/flowstate-app/src/environments/environment.ts",
+                  "with": "projects/flowstate-app/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -122,33 +122,33 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "lib-demo:build"
+            "browserTarget": "flowstate-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "lib-demo:build:production"
+              "browserTarget": "flowstate-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "lib-demo:build"
+            "browserTarget": "flowstate-app:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/lib-demo/src/test.ts",
-            "polyfills": "projects/lib-demo/src/polyfills.ts",
-            "tsConfig": "projects/lib-demo/tsconfig.spec.json",
-            "karmaConfig": "projects/lib-demo/karma.conf.js",
+            "main": "projects/flowstate-app/src/test.ts",
+            "polyfills": "projects/flowstate-app/src/polyfills.ts",
+            "tsConfig": "projects/flowstate-app/tsconfig.spec.json",
+            "karmaConfig": "projects/flowstate-app/karma.conf.js",
             "assets": [
-              "projects/lib-demo/src/favicon.ico",
-              "projects/lib-demo/src/assets"
+              "projects/flowstate-app/src/favicon.ico",
+              "projects/flowstate-app/src/assets"
             ],
             "styles": [
-              "projects/lib-demo/src/styles.scss"
+              "projects/flowstate-app/src/styles.scss"
             ],
             "scripts": []
           }
@@ -157,9 +157,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/lib-demo/tsconfig.app.json",
-              "projects/lib-demo/tsconfig.spec.json",
-              "projects/lib-demo/e2e/tsconfig.json"
+              "projects/flowstate-app/tsconfig.app.json",
+              "projects/flowstate-app/tsconfig.spec.json",
+              "projects/flowstate-app/e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -169,16 +169,17 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/lib-demo/e2e/protractor.conf.js",
-            "devServerTarget": "lib-demo:serve"
+            "protractorConfig": "projects/flowstate-app/e2e/protractor.conf.js",
+            "devServerTarget": "flowstate-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "lib-demo:serve:production"
+              "devServerTarget": "flowstate-app:serve:production"
             }
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "flowstate-ng"
 }

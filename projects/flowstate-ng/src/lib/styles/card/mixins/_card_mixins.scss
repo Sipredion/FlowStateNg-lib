@@ -1,0 +1,9 @@
+@mixin card-shadow($color) {
+  @if($color == 'dark') {
+    box-shadow: $box-shadow-dark;
+  } @else if($color == 'light') {
+    box-shadow: $box-shadow-light;
+  } @else {
+    box-shadow: $box-shadow-default;
+  }
+}
